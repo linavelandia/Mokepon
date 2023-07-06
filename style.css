@@ -1,0 +1,142 @@
+body{
+    background-color: lavenderblush;
+}
+h1{
+    color: lightcoral;
+    height: 3rem;
+    font-size: 5rem;
+}
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center                                       ;
+}
+.tarjetas{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.tarjeta_mokepon{
+    width: 243px;
+    height: 228px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: lightcoral;
+    margin: 10px;
+    border: 3px solid black;
+    border-radius: 1rem;
+    background-color: white;
+    text-align: center;
+}
+.tarjeta_mokepon img{
+    width: 149px;
+    height: 149px;
+    margin: 5px;
+}
+input{
+    display: none;
+}
+input:checked + label{ 
+    border: 7px solid lightcoral;
+}
+
+#boton-mascota{
+    width: 154px;
+    border-radius: 3rem;
+    height: 12vh;
+    font-weight: 600;
+    background-color: lightcoral;
+    color: black;
+    border: none;
+    padding: 1px;
+    margin: 10px;
+}
+
+#seleccionar-ataque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons_ataque{
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+.boton_de_ataques{
+    background-color: #f0808063;
+    width: 140px;
+    height: 58px;
+    border: 1px solid lightcoral;
+    font-size: 15px;
+}
+#mensajes{
+    width: 160px;
+    text-align: center;
+    /* box-sizing: border-box; */
+    /* padding: 27px; */
+    height: 80px;
+    background-color: lightcoral;
+    border-radius: 22px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+#boton-reiniciar{
+    border: 1px solid white;
+    background: transparent;
+    font-size: 17px;
+    color: white;
+}
+
+.ataques{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    text-align: center;
+}
+#vidas_jugador, #vidas_enemigo{
+    font-size: 32px;
+    margin-bottom: 0;
+}
+.ataques_jugador, .ataques_enemigo{
+    display: flex;
+    flex-direction: column;
+}
+#ver_mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#mapa{
+    border: 2px solid lightcoral;
+}
+#ver_mapa button{
+    width: 80px;
+    border-radius: 3rem;
+    height: 12vh;
+    font-weight: 600;
+    background-color: lightcoral;
+    color: black;
+    border: none;
+    padding: 1px;
+    margin: 10px;
+}
+@media (max-width: 450px){
+    .tarjetas{
+        flex-direction: column;
+    }
+    .buttons_ataque{
+        flex-direction: column;
+    }
+}
+@media (max-width: 360px){
+    #ver_mapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

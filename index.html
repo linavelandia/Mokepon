@@ -5,47 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokepon</title>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Mokepon 🔥💧🌱</h1>
 
     <section id="seleccionar-mascota">
+
+        <h1>Mokepon</h1>
+
         <h2>Elige a tu mascota</h2>
 
-        <label for="hipodoge">Hipodoge</label>
-        <input type="radio" name="mascota" id="hipodoge">
+        <div id="contenedorTarjetas" class="tarjetas">
 
-        <label for="capipepo">Capipepo</label>
-        <input type="radio" name="mascota" id="capipepo">
-     
-        <label for="ratigueya">Ratigueya</label>
-        <input type="radio" name="mascota" id="ratigueya">
+        </div>
 
-        <button id="boton-mascota">seleccionar</button>
+        <button id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <section id="ver_mapa">
+        <h2 class="subtitulo">Recorre el mapa con tu mokepon</h2>
+        <canvas id="mapa"></canvas>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+        <div>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+        </div>
     </section>
 
     <section id="seleccionar-ataque">
+        <h1>Mokepon</h1>
         <h2>Elige tu ataque</h2>
 
-        <p>tu mascota tiene <span>3</span> vidas</p>
-        <p>la mascota del enemigo tiene <span>3</span> vidas</p>
+        <div id="contenedorAtaques" class="buttons_ataque">
+            
+        </div>
 
-            <p>
-                <button id="boton-fuego">Fuego🔥</button>
-                <button id="boton-agua">Agua💧</button>
-                <button id="boton-tierra">Tierra 🌱</button>
-            </p>
+        <div id="mensajes">
+            <p id="resultado">MUCHA SUERTE</p>
+                
+            <section id="reiniciar">
+                <button id="boton-reiniciar">reiniciar</button>
+            </section>
+        </div>
+        
+
+        <div class="ataques">
+            <div class="ataques_jugador">
+                <p id="vidas_jugador">0</p>
+                <p id="mascota_jugador"></p> 
+                <div id="ataquesDelJugador"></div>
+            </div>
+            <div class="ataques_enemigo">
+                <p id="vidas_enemigo">0</p>
+                <p id="mascota_enemigo"></p>
+                <div id="ataquesDelEnemigo"></div>
+            </div>
+        </div>  
     </section>
-
-    <section id="mensajes">
-        <p>Tu mascota ataco con Fuego, la mascota del enemigo ataco copn Tierra, GANASTE</p>
-    </section>
-
-    <section id="reiniciar">
-        <button id="boton-reiniciar">reiniciar</button>
-    </section>
-
-    
+    <script src="main.js"></script>
 </body>
 </html>
